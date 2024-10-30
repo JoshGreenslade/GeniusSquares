@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "esnext",
+    "target": "es5",
+    "declaration": true, // to generate .d.ts files for type definitions
+    "jsx": "react-jsx" // or "react" depending on your JSX style
+  },
+  "include": ["src/**/*.tsx", "src/**/*.ts"]
+}
