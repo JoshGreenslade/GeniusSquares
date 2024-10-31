@@ -1,15 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Square = void 0;
-var Square = /** @class */ (function () {
-    function Square() {
+export class Square {
+    constructor() {
         this.isOccupied = false;
         this.tile = null;
     }
-    Square.prototype.AddTile = function (tile) {
+    AddTile(tile) {
         this.isOccupied = true;
         this.tile = tile;
-    };
-    return Square;
-}());
-exports.Square = Square;
+    }
+}

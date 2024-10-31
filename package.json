@@ -1,19 +1,25 @@
 {
-  "name": "GSquares",
+  "name": "gsquares",
   "version": "1.0.0",
-  "main": "GSquares.js",
+  "description": "Provides the game code for Genuis",
+  "main": "dist/GSquares.js",
   "types": "dist/index.d.ts",
-  "devDependencies": {
-    "ts-loader": "^9.5.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.6.3",
-    "undici-types": "^6.20.0",
-    "webpack-cli": "^5.1.4"
-  },
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "build": "npm run build:types && npm run build:dist",
-    "build:types": "tsc",
-    "build:dist": "webpack --config webpack.config.js",
+    "build:types": "tsc --project tsconfig.json",
+    "build:dist": "webpack --config webpack.config.js && npm run bundle:dts",
+    "bundle:dts": "dts-bundle-generator -o dist/GSquares.d.ts src/index.tsx",
     "clean": "rm -rf dist node_modules"
+  },
+  "devDependencies": {
+    "dts-bundle-generator": "^9.5.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.3",
+    "undici": "^6.20.1",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
   }
 }
