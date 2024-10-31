@@ -8,6 +8,7 @@ export declare class Board {
     private createSquares;
     private IsTileOccupied;
     private CanTileBePlacedAtPos;
+    CanPlaceTile(tile: Tile, pos: number[]): boolean;
     PlaceTile(tile: Tile, pos: number[]): void;
     GetSquare(x: number, y: number): Square;
     PrintBoard(): void;

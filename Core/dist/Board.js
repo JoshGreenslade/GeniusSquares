@@ -27,6 +27,9 @@ export class Board {
         }
         return true;
     }
+    CanPlaceTile(tile, pos) {
+        return this.CanTileBePlacedAtPos(tile, pos);
+    }
     PlaceTile(tile, pos) {
         if (tile.isPlaced) {
             console.log(`Tile ${tile} is already placed`);

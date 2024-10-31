@@ -20,6 +20,7 @@ export declare class Board {
 	private createSquares;
 	private IsTileOccupied;
 	private CanTileBePlacedAtPos;
+	CanPlaceTile(tile: Tile, pos: number[]): boolean;
 	PlaceTile(tile: Tile, pos: number[]): void;
 	GetSquare(x: number, y: number): Square;
 	PrintBoard(): void;
@@ -34,5 +35,22 @@ export declare class Game {
 	AddBlockers(): void;
 	IsBoardFull(): boolean;
 }
+declare const SingleSquare: () => Tile;
+declare const DoubleLine: () => Tile;
+declare const TripleLine: () => Tile;
+declare const QuadLine: () => Tile;
+declare const Corner: () => Tile;
+declare const Square$1: () => Tile;
+declare const TBlock: () => Tile;
+declare const SBlock: () => Tile;
+declare const LBlock: () => Tile;
+
+declare namespace Tiles {
+	export { Corner, DoubleLine, LBlock, QuadLine, SBlock, SingleSquare, Square$1 as Square, TBlock, TripleLine };
+}
+
+export {
+	Tiles,
+};
 
 export {};

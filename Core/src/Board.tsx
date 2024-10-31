@@ -39,6 +39,10 @@ export class Board {
     return true;
   }
 
+  public CanPlaceTile(tile: Tile, pos: number[]): boolean {
+    return this.CanTileBePlacedAtPos(tile, pos);
+  }
+
   public PlaceTile(tile: Tile, pos: number[]) {
     if (tile.isPlaced) {
       console.log(`Tile ${tile} is already placed`);
